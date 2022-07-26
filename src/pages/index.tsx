@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Listing } from "../features/listing/components/Listing";
 
 const Index: NextPage = () => {
   return (
@@ -10,7 +11,20 @@ const Index: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold mt-8 mb-16">Doll Directory</h1>
+          <div className="grid md:grid-cols-4 md:gap-4 md:gap-y-16 grid-cols:1 gap-8">
+            {[...Array(7)].map(() =>
+              // eslint-disable-next-line react/jsx-key
+              <Listing
+                price={30000}
+                title="Pink Karambit"
+                sellerName="Niko Rain"
+                sellerPhoneNumber="(123) 456-7890"
+              />
+            )}
+          </div>
+        </div>
       </main>
     </div>
   )

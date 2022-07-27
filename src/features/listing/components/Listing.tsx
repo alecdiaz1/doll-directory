@@ -3,11 +3,11 @@ import { ListingProps } from "../types";
 import {FC} from "react";
 import {formatter} from "../utils/formatPrice";
 
-export const Listing: FC<ListingProps> = ({ price, title, sellerName, sellerPhoneNumber }) => (
+export const Listing: FC<ListingProps> = ({ price, title, sellerName, sellerPhoneNumber, imageUrl }) => (
   <div>
     <Image
       alt="listing"
-      src="https://media.discordapp.net/attachments/987239258601431080/998264128466604082/IMG_7700.jpg"
+      src={imageUrl}
       width="200px"
       height="200px"
       layout="responsive"

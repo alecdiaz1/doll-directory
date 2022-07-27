@@ -3,8 +3,15 @@ import { ListingProps } from "../types";
 import {FC} from "react";
 import {formatter} from "../utils/formatPrice";
 
-export const Listing: FC<ListingProps> = ({ price, title, sellerName, sellerPhoneNumber, imageUrl }) => (
-  <div>
+export const Listing: FC<ListingProps> = ({
+    price,
+    title,
+    sellerName,
+    sellerPhoneNumber,
+    imageUrl,
+    featuredListing
+}) => (
+  <div className={featuredListing ? 'bg-red-700' : ''}>
     <Image
       alt="listing"
       src={imageUrl}

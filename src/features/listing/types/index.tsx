@@ -7,6 +7,7 @@ export interface ListingProps {
   sellerPhoneNumber: string;
   title: string;
   imageUrl: string | StaticImageData;
+  featuredListing: boolean;
 }
 
 export interface ListingAPIResponse {
@@ -19,4 +20,5 @@ export interface ListingAPIResponse {
     id: string,
     url: string,
   }]
+  featuredListing: boolean;
 }

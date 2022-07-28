@@ -16,7 +16,7 @@ export const Listings = () => {
     <>
       <div>
         <h1 className="text-4xl mb-8 font-bold">FEATURED LISTINGS</h1>
-        <div className="grid md:grid-cols-4 md:gap-8 md:gap-y-16 grid-cols:1 gap-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 md:gap-8 md:gap-y-16 sm:grid-cols-2 grid-cols:1 gap-8">
           {allListings
             .filter(listing => listing.featuredListing)
             .map(listing => (
@@ -36,7 +36,7 @@ export const Listings = () => {
       </div>
       <div>
         <h1 className="text-4xl mb-8 font-bold">ALL LISTINGS</h1>
-        <div className="grid md:grid-cols-4 md:gap-8 md:gap-y-16 grid-cols:1 gap-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 md:gap-8 md:gap-y-16 sm:grid-cols-2 grid-cols:1 gap-8">
           {allListings
             .filter(listing => !listing.featuredListing)
             .map(listing => (

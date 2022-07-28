@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ListingProps } from "../types";
 import { FC } from "react";
 import { formatter } from "../utils/formatPrice";
+import PlaceholderImage from "../../../assets/clipboard.svg";
 
 export const Listing: FC<ListingProps> = ({
     price,

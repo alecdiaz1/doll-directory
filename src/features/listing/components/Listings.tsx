@@ -21,10 +21,12 @@ export const Listings = () => {
           key={listing.id}
           price={listing.price}
           title={listing.title}
+          description={listing.description}
           sellerName={listing.sellerName}
           sellerPhoneNumber={listing.sellerPhoneNumber}
           imageUrl={listing?.photos[0]?.url || PlaceholderImage}
           featuredListing={listing.featuredListing}
+          location={listing.location}
         />
       ))}
     </>

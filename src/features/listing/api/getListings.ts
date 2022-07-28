@@ -9,6 +9,7 @@ const query = `
     sellerName
     sellerPhoneNumber
     title
+    location
     photos {
       id
       url

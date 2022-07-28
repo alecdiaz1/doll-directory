@@ -5,11 +5,13 @@ import {formatter} from "../utils/formatPrice";
 
 export const Listing: FC<ListingProps> = ({
     price,
+    description,
     title,
     sellerName,
     sellerPhoneNumber,
     imageUrl,
-    featuredListing
+    featuredListing,
+    location
 }) => (
   <div className={featuredListing ? 'bg-red-700' : ''}>
     <Image
@@ -19,9 +21,16 @@ export const Listing: FC<ListingProps> = ({
       height="200px"
       layout="responsive"
     />
-    <p>{formatter.format(price)}</p>
     <p>{title}</p>
-    <p>{sellerName}</p>
-    <p>{sellerPhoneNumber}</p>
+    <p>{description}</p>
+    { (sellerName && sellerPhoneNumber) && (
+      <p>{`${sellerName} - ${sellerPhoneNumber}`}</p>
+    )}
+    { price &&
+      <p>{formatter.format(price)}</p>
+    }
+    { location &&
+      <p>{location}</p>
+    }
   </div>
 )

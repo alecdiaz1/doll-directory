@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Listings } from "../features/listing/components/Listings";
+import {Navbar} from "../components/Navbar";
 
 const Index: NextPage = () => (
   <div>
@@ -11,11 +12,9 @@ const Index: NextPage = () => (
       <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
     </Head>
     <main>
-      <div className="container mx-auto">
-        <h1 className="text-3xl font-bold mt-8 mb-16">Doll Directory</h1>
-        <div>
-          <Listings />
-        </div>
+      <Navbar />
+      <div className="container mx-auto mt-12">
+        <Listings />
       </div>
     </main>
   </div>

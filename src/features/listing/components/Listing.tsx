@@ -27,12 +27,13 @@ export const Listing: FC<ListingProps> = ({
       height="200px"
       layout="responsive"
     />
-    <p>{title}</p>
-    <p>{description}</p>
-    { (sellerName && sellerPhoneNumber) && (
-      <p className="flex items-center">
-        {`${sellerName} - ${sellerPhoneNumber}`}
-          <span className="cursor-pointer ml-2 block pt-2">
+    <div className="mt-3 px-3">
+        <p className="font-semibold text-xl">{title}</p>
+        <p className="font-light">{description}</p>
+        { (sellerName && sellerPhoneNumber) && (
+          <p className="-mt-2 flex items-center font-semibold">
+              {`${sellerName} - ${sellerPhoneNumber}`}
+              <span className="cursor-pointer ml-2 block pt-2">
             <Image
               src={Clipboard}
               alt={sellerPhoneNumber}
@@ -42,18 +43,19 @@ export const Listing: FC<ListingProps> = ({
               onClick={() => copyPhoneNumber(sellerPhoneNumber)}
             />
           </span>
-      </p>
-    )}
-    { price &&
-      <p>{formatter.format(price)}</p>
-    }
-    { location &&
-      <p className="flex">
+          </p>
+        )}
+        { price &&
+          <p className="font-bold">{formatter.format(price)}</p>
+        }
+        { location &&
+          <p className="flex">
           <span className="mt-0.5 mr-1">
               <Image src={Location} alt={Location} width="20px" height="20px"/>
           </span>
-          {location}
-      </p>
-    }
+              {location}
+          </p>
+        }
+    </div>
   </div>
 )

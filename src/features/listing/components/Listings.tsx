@@ -15,7 +15,7 @@ export const Listings = () => {
   return (
     <>
       <div>
-        <h1 className="text-5xl mb-8">FEATURED LISTINGS</h1>
+        <h1 className="text-4xl mb-8 font-bold">FEATURED LISTINGS</h1>
         <div className="grid md:grid-cols-4 md:gap-8 md:gap-y-16 grid-cols:1 gap-8">
           {allListings
             .filter(listing => listing.featuredListing)
@@ -35,7 +35,7 @@ export const Listings = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-5xl mb-8">ALL LISTINGS</h1>
+        <h1 className="text-4xl mb-8 font-bold">ALL LISTINGS</h1>
         <div className="grid md:grid-cols-4 md:gap-8 md:gap-y-16 grid-cols:1 gap-8">
           {allListings
             .filter(listing => !listing.featuredListing)

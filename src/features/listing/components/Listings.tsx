@@ -6,6 +6,7 @@ import PlaceholderImage from "../../../../public/placeholder-image.jpg";
 
 export const Listings = () => {
   const [allListings, setAllListings] = useState<ListingAPIResponse[] | []>([])
+  const today = new Date();
 
   useEffect(() => {
     getListings()
@@ -19,6 +20,7 @@ export const Listings = () => {
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols:1 gap-8">
           {allListings
             .filter(listing => listing.featuredListing)
+            .filter(listing => new Date(listing.expiryDate) > today)
             .map(listing => (
               <Listing
                 id={listing.id}
@@ -39,6 +41,7 @@ export const Listings = () => {
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols:1 gap-8">
           {allListings
             .filter(listing => !listing.featuredListing)
+            .filter(listing => new Date(listing.expiryDate) > today)
             .map(listing => (
               <Listing
                 id={listing.id}

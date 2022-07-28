@@ -24,4 +24,5 @@ export interface ListingAPIResponse {
   featuredListing: boolean;
   description: string;
   location: string | null;
+  expiryDate: string;
 }

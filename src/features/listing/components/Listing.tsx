@@ -20,6 +20,7 @@ export const Listing: FC<ListingProps> = ({
     location
 }) => (
   <div>
+    {/* TODO: Add ability to click through multiple images */}
     <Image
       alt="listing"
       src={imageUrl}

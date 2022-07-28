@@ -49,11 +49,11 @@ export const Listing: FC<ListingProps> = ({
           <p className="font-bold">{formatter.format(price)}</p>
         }
         { location &&
-          <p className="flex">
+          <p className="flex font-bold">
           <span className="mt-0.5 mr-1">
-              <Image src={Location} alt={Location} width="20px" height="20px"/>
+            <Image src={Location} alt={Location} width="20px" height="20px"/>
           </span>
-              {location}
+            {location}
           </p>
         }
     </div>

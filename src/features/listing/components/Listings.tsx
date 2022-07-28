@@ -17,7 +17,7 @@ export const Listings = () => {
     <>
       <div>
         <h1 className="text-4xl mb-8 font-bold">FEATURED LISTINGS</h1>
-        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols:1 gap-8">
+        <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols:1 gap-8">
           {allListings
             .filter(listing => listing.featuredListing)
             .filter(listing => new Date(listing.expiryDate) > today)
@@ -36,9 +36,9 @@ export const Listings = () => {
             ))}
         </div>
       </div>
-      <div>
+      <div className="mt-8">
         <h1 className="text-4xl mb-8 font-bold">ALL LISTINGS</h1>
-        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols:1 gap-8">
+        <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols:1 gap-8">
           {allListings
             .filter(listing => !listing.featuredListing)
             .filter(listing => new Date(listing.expiryDate) > today)

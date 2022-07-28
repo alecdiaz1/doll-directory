@@ -7,7 +7,6 @@ export interface ListingProps {
   sellerPhoneNumber: string | null;
   title: string;
   imageUrl: string | StaticImageData;
-  featuredListing: boolean;
   description: string;
   location: string | null;
 }

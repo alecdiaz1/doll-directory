@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ListingProps } from "../types";
-import {FC} from "react";
-import {formatter} from "../utils/formatPrice";
+import { FC } from "react";
+import { formatter } from "../utils/formatPrice";
 
 export const Listing: FC<ListingProps> = ({
     price,
@@ -10,10 +10,9 @@ export const Listing: FC<ListingProps> = ({
     sellerName,
     sellerPhoneNumber,
     imageUrl,
-    featuredListing,
     location
 }) => (
-  <div className={featuredListing ? 'bg-red-700' : ''}>
+  <div>
     <Image
       alt="listing"
       src={imageUrl}

@@ -12,7 +12,7 @@ const Index: NextPage = () => (
     <main>
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold mt-8 mb-16">Doll Directory</h1>
-        <div className="grid md:grid-cols-4 md:gap-4 md:gap-y-16 grid-cols:1 gap-8">
+        <div>
           <Listings />
         </div>
       </div>

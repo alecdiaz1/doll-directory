@@ -1,5 +1,5 @@
 import Image from "next/image";
-import DDLogo from "../../public/DDLOGO.png";
+import DDLogo from "../../public/DDLogo.png";
 import Link from "next/link";
 
 export const Navbar = () => (

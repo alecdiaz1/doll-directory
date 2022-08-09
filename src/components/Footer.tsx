@@ -3,10 +3,9 @@ export const Footer = () => (
     <div className="container mx-auto sm:mx-auto ml-4">
       <h3 className="text-lg font-bold">Listing Agents</h3>
       <div className="grid">
-        {/* TODO: Add  real phone numbers*/}
-        <p>Paris Argo - (123) 456-7890</p>
-        <p>Niko Rain - (123) 456-7890</p>
-        <p>Dominic Bastias - (123) 456-7890</p>
+        <p>Paris Argo - (415) 118-7606</p>
+        <p>Niko Rain - (415) 998-8086</p>
+        <p>Dominic Bastias - (628) 354-7440</p>
       </div>
     </div>
     <div className="flex justify-center mt-8">

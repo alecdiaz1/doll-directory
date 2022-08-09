@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { getListings } from "../api/getListings";
 import { Listing } from "./Listing";
 import { ListingAPIResponse } from "../types";
-import PlaceholderImage from "../../../../public/placeholder-image.jpg";
 import Link from "next/link";
 
 export const Listings = () => {
@@ -40,7 +39,7 @@ export const Listings = () => {
                 description={listing.description}
                 sellerName={listing.sellerName}
                 sellerPhoneNumber={listing.sellerPhoneNumber}
-                imageUrl={listing?.photos[0]?.url || PlaceholderImage}
+                images={listing.photos}
                 location={listing.location}
               />
             ))}
@@ -63,7 +62,7 @@ export const Listings = () => {
                 description={listing.description}
                 sellerName={listing.sellerName}
                 sellerPhoneNumber={listing.sellerPhoneNumber}
-                imageUrl={listing?.photos[0]?.url || PlaceholderImage}
+                images={listing.photos}
                 location={listing.location}
               />
             ))}

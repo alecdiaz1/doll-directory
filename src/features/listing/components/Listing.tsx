@@ -5,6 +5,8 @@ import { formatter } from "../utils/formatPrice";
 import Clipboard from "../../../assets/clipboard.svg";
 import Location from "../../../assets/location.svg";
 import { toast } from "react-toastify";
+import { Carousel } from "react-responsive-carousel";
+import PlaceholderImage from "../../../../public/placeholder-image.jpg";
 
 export const Listing: FC<ListingProps> = ({
   price,
@@ -12,7 +14,7 @@ export const Listing: FC<ListingProps> = ({
   title,
   sellerName,
   sellerPhoneNumber,
-  imageUrl,
+  images,
   location,
 }) => {
   const showCopyNumberToast = () => {
@@ -20,7 +22,7 @@ export const Listing: FC<ListingProps> = ({
       position: "top-center",
       autoClose: 3000,
       closeOnClick: true,
-      toastId: 'toast'
+      toastId: "toast",
     });
   };
 
@@ -31,14 +33,37 @@ export const Listing: FC<ListingProps> = ({
 
   return (
     <div>
-      {/* TODO: Add ability to click through multiple images */}
-      <Image
-        alt="listing"
-        src={imageUrl}
-        width="200px"
-        height="200px"
-        layout="responsive"
-      />
+      {images.length > 0 ? (
+        <Carousel
+          showArrows
+          showIndicators={images.length > 1}
+          showThumbs={false}
+          emulateTouch
+          showStatus={false}
+        >
+          {images.map(({ id, url }) => (
+            <div key={id}>
+              <Image
+                key={id || ""}
+                alt="listing"
+                src={url}
+                width="600px"
+                height="600px"
+                layout="responsive"
+              />
+            </div>
+          ))}
+        </Carousel>
+      ) : (
+        <Image
+          key={""}
+          alt="listing"
+          src={PlaceholderImage}
+          width="600px"
+          height="600px"
+          layout="responsive"
+        />
+      )}
       <div className="mt-3 px-3">
         <p className="font-semibold text-xl">{title}</p>
         <p className="font-light">{description}</p>

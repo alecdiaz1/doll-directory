@@ -1,12 +1,17 @@
-import { StaticImageData } from "next/image";
-
 export interface ListingProps {
   id: string;
   price: number | null;
   sellerName: string | null;
   sellerPhoneNumber: string | null;
   title: string;
-  imageUrl: string | StaticImageData;
+  images:
+    | [
+        {
+          id: string;
+          url: string;
+        }
+      ]
+    | [];
   description: string;
   location: string | null;
 }

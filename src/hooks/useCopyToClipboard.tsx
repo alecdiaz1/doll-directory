@@ -13,5 +13,5 @@ export const useCopyToClipboard = (textToCopy: string, toastText: string) => {
   return () => {
     navigator.clipboard.writeText(textToCopy).then();
     showCopyNumberToast();
-  }
-}
+  };
+};

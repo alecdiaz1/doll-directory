@@ -20,7 +20,10 @@ a {
   box-sizing: border-box;
 }
 
-.carousel, .slider-wrapper, .slider, .slide {
+.carousel,
+.slider-wrapper,
+.slider,
+.slide {
   height: 100%;
 }
 

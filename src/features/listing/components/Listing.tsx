@@ -6,7 +6,7 @@ import Clipboard from "../../../assets/clipboard.svg";
 import Location from "../../../assets/location.svg";
 import { Carousel } from "react-responsive-carousel";
 import PlaceholderImage from "../../../../public/placeholder-image.jpg";
-import {useCopyToClipboard} from "../../../hooks/useCopyToClipboard";
+import { useCopyToClipboard } from "../../../hooks/useCopyToClipboard";
 
 export const Listing: FC<ListingProps> = ({
   price,
@@ -17,7 +17,10 @@ export const Listing: FC<ListingProps> = ({
   images,
   location,
 }) => {
-  const copyPhoneNumber = useCopyToClipboard(sellerPhoneNumber || "", "Phone number copied to clipboard!")
+  const copyPhoneNumber = useCopyToClipboard(
+    sellerPhoneNumber || "",
+    "Phone number copied to clipboard!"
+  );
 
   return (
     <div>

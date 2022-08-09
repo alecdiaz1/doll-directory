@@ -4,11 +4,7 @@ import { FC } from "react";
 import { formatter } from "../utils/formatPrice";
 import Clipboard from "../../../assets/clipboard.svg";
 import Location from "../../../assets/location.svg";
-
-const copyPhoneNumber = (phoneNumber: string) => {
-  // TODO: Show notification that phone number was copied
-  navigator.clipboard.writeText(phoneNumber).then();
-};
+import { toast } from "react-toastify";
 
 export const Listing: FC<ListingProps> = ({
   price,
@@ -19,6 +15,20 @@ export const Listing: FC<ListingProps> = ({
   imageUrl,
   location,
 }) => {
+  const showCopyNumberToast = () => {
+    toast("Phone number copied to clipboard!", {
+      position: "top-center",
+      autoClose: 3000,
+      closeOnClick: true,
+      toastId: 'toast'
+    });
+  };
+
+  const copyPhoneNumber = (phoneNumber: string) => {
+    navigator.clipboard.writeText(phoneNumber).then();
+    showCopyNumberToast();
+  };
+
   return (
     <div>
       {/* TODO: Add ability to click through multiple images */}

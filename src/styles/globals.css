@@ -20,6 +20,10 @@ a {
   box-sizing: border-box;
 }
 
+.carousel, .slider-wrapper, .slider, .slide {
+  height: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

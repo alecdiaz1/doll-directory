@@ -21,37 +21,40 @@ export const Listing: FC<ListingProps> = ({
 
   return (
     <div>
-      {images.length > 0 ? (
-        <Carousel
-          showArrows
-          showIndicators={images.length > 1}
-          showThumbs={false}
-          emulateTouch
-          showStatus={false}
-        >
-          {images.map(({ id, url }) => (
-            <div key={id}>
-              <Image
-                key={id || ""}
-                alt="listing"
-                src={url}
-                width="600px"
-                height="600px"
-                layout="responsive"
-              />
-            </div>
-          ))}
-        </Carousel>
-      ) : (
-        <Image
-          key={""}
-          alt="listing"
-          src={PlaceholderImage}
-          width="600px"
-          height="600px"
-          layout="responsive"
-        />
-      )}
+      <div className="pt-[100%] h-0 w-100 relative">
+        {images.length > 0 ? (
+          <Carousel
+            showArrows
+            showIndicators={images.length > 1}
+            showThumbs={false}
+            emulateTouch
+            showStatus={false}
+            className="absolute top-0 left-0 h-full w-full overflow-hidden"
+          >
+            {images.map(({ id, url }) => (
+              <div key={id}>
+                <Image
+                  key={id || ""}
+                  alt="listing"
+                  src={url}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            ))}
+          </Carousel>
+        ) : (
+          <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
+            <Image
+              key={""}
+              alt="listing"
+              src={PlaceholderImage}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        )}
+      </div>
       <div className="mt-3 px-3">
         <p className="font-semibold text-xl">{title}</p>
         <p className="font-light">{description}</p>

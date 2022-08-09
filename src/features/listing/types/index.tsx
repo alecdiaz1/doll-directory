@@ -17,10 +17,14 @@ export interface ListingAPIResponse {
   sellerName: string | null;
   sellerPhoneNumber: string | null;
   title: string;
-  photos: [{
-    id: string,
-    url: string,
-  }] | [];
+  photos:
+    | [
+        {
+          id: string;
+          url: string;
+        }
+      ]
+    | [];
   featuredListing: boolean;
   description: string;
   location: string | null;

@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
 import { Listings } from "../features/listing/components/Listings";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -18,6 +18,6 @@ const Index: NextPage = () => (
     </main>
     <Footer />
   </div>
-)
+);
 
-export default Index
+export default Index;

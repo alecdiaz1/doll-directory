@@ -10,13 +10,16 @@ export const Footer = () => (
       </div>
     </div>
     <div className="flex justify-center mt-8">
-      <p>built by&nbsp;
+      <p>
+        built by&nbsp;
         <span>
-        <a href="https://twitch.tv/thisisnotbyte" className="underline">thisisnotbyte</a>
-      </span>
+          <a href="https://twitch.tv/thisisnotbyte" className="underline">
+            thisisnotbyte
+          </a>
+        </span>
         {/* boba emoji below */}
         &nbsp;for nopixel 🧋
       </p>
     </div>
   </div>
-)
+);

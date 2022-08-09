@@ -4,9 +4,9 @@ import { FC } from "react";
 import { formatter } from "../utils/formatPrice";
 import Clipboard from "../../../assets/clipboard.svg";
 import Location from "../../../assets/location.svg";
-import { toast } from "react-toastify";
 import { Carousel } from "react-responsive-carousel";
 import PlaceholderImage from "../../../../public/placeholder-image.jpg";
+import {useCopyToClipboard} from "../../../hooks/useCopyToClipboard";
 
 export const Listing: FC<ListingProps> = ({
   price,
@@ -17,19 +17,7 @@ export const Listing: FC<ListingProps> = ({
   images,
   location,
 }) => {
-  const showCopyNumberToast = () => {
-    toast("Phone number copied to clipboard!", {
-      position: "top-center",
-      autoClose: 3000,
-      closeOnClick: true,
-      toastId: "toast",
-    });
-  };
-
-  const copyPhoneNumber = (phoneNumber: string) => {
-    navigator.clipboard.writeText(phoneNumber).then();
-    showCopyNumberToast();
-  };
+  const copyPhoneNumber = useCopyToClipboard(sellerPhoneNumber || "", "Phone number copied to clipboard!")
 
   return (
     <div>
@@ -77,7 +65,7 @@ export const Listing: FC<ListingProps> = ({
                 width="20px"
                 height="20px"
                 className="block"
-                onClick={() => copyPhoneNumber(sellerPhoneNumber)}
+                onClick={() => copyPhoneNumber()}
               />
             </span>
           </p>

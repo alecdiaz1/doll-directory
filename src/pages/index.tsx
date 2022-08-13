@@ -7,13 +7,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Index: NextPage = () => (
-  <div>
+  <div className="h-screen flex flex-col">
     <Head>
       <title>Doll Directory</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Navbar />
-    <main>
+    <main className="flex-grow">
       <div className="container mx-auto mt-12">
         <Listings />
         <ToastContainer />

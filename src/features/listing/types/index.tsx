@@ -1,6 +1,6 @@
 export interface ListingProps {
   id: string;
-  price: number | null;
+  price: string | null;
   sellerName: string | null;
   sellerPhoneNumber: string | null;
   title: string;
@@ -19,7 +19,7 @@ export interface ListingProps {
 
 export interface ListingAPIResponse {
   id: string;
-  price: number | null;
+  price: string | null;
   sellerName: string | null;
   sellerPhoneNumber: string | null;
   title: string;

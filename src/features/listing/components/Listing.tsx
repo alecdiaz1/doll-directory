@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ListingProps } from "../types";
 import { FC } from "react";
-import { formatter } from "../utils/formatPrice";
 import Clipboard from "../../../assets/clipboard.svg";
 import Location from "../../../assets/location.svg";
 import { Carousel } from "react-responsive-carousel";
@@ -83,7 +82,7 @@ export const Listing: FC<ListingProps> = ({
             </span>
           </p>
         )}
-        {price && <p className="font-bold">{formatter.format(price)}</p>}
+        {price && <p className="font-bold">{price}</p>}
         {location && (
           <p className="flex font-bold">
             <span className="mt-0.5 mr-1">

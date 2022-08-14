@@ -10,11 +10,10 @@ const Index: NextPage = () => (
   <div className="h-screen flex flex-col">
     <Head>
       <title>Doll Directory</title>
-      <link rel="icon" href="/favicon.ico" />
     </Head>
     <Navbar />
     <main className="flex-grow">
-      <div className="container mx-auto mt-12">
+      <div className="container mx-auto mt-12 px-4">
         <Listings />
         <ToastContainer />
       </div>

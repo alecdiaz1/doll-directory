@@ -48,7 +48,7 @@ export const Listings = () => {
                 />
               ))
             :
-            <p className="text-lg">No featured listings yet! Contact a&nbsp;
+            <p className="text-lg text-center sm:text-left">No featured listings yet! Contact a&nbsp;
               <span>
                 <Link href="#footer">
                   <a className="underline">listing agent</a>
@@ -58,7 +58,7 @@ export const Listings = () => {
           }
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-28">
         <h1 className="text-4xl mb-8 font-bold text-center sm:text-left">
           ALL LISTINGS
         </h1>
@@ -84,7 +84,7 @@ export const Listings = () => {
                 />
               ))
           :
-            <p className="text-lg">No listings yet! Contact a&nbsp;
+            <p className="text-lg text-center sm:text-left">No listings yet! Contact a&nbsp;
               <span>
                 <Link href="#footer">
                   <a className="underline">listing agent</a>

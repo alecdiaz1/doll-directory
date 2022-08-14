@@ -34,15 +34,22 @@ export const Listing: FC<ListingProps> = ({
             showStatus={false}
             className="absolute top-0 left-0 h-full w-full overflow-hidden"
           >
-            {images.map(({ id, url }) => (
-              <div key={id}>
-                <Image
-                  key={id || ""}
-                  alt="listing"
-                  src={url}
-                  layout="fill"
-                  objectFit="cover"
-                />
+            {images.map(({ id, url, mimeType }) => (
+              <div key={id} className="h-full w-full flex flex-col justify-center align-center">
+                {
+                  mimeType === "video/mp4" ?
+                    <video autoPlay muted loop>
+                      <source src={url} type="video/mp4"/>
+                    </video>
+                  :
+                    <Image
+                      key={id || ""}
+                      alt="listing"
+                      src={url}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                }
               </div>
             ))}
           </Carousel>

@@ -9,6 +9,7 @@ export interface ListingProps {
         {
           id: string;
           url: string;
+          mimeType: string;
         }
       ]
     | [];
@@ -27,6 +28,7 @@ export interface ListingAPIResponse {
         {
           id: string;
           url: string;
+          mimeType: string;
         }
       ]
     | [];

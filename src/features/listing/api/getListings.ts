@@ -13,6 +13,7 @@ const query = `
     photos {
       id
       url
+      mimeType
     }
   }
 }

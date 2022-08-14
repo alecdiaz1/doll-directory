@@ -1,6 +1,6 @@
 export const Footer = () => (
   <div id="footer" className="bg-fuchsia-200 mt-16 py-6">
-    <div className="container mx-auto sm:mx-auto ml-4">
+    <div className="container mx-auto sm:mx-auto pl-4">
       <h3 className="text-lg font-bold">Listing Agents</h3>
       <div className="grid">
         <p>Paris Argo - (415) 118-7606</p>
